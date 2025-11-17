@@ -1,0 +1,108 @@
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya
+$ git clone https://github.com/Dayanandar/GitLearning.git
+Cloning into 'GitLearning'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya
+$ git config --global user.name arghyacodes
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya
+$ git config --global user.email arghyaghoshal.juetce@gmail.com
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya
+$ ls
+GitLearning/
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya
+$ ls -i
+3940649674481344 GitLearning/
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya
+$ ls -a
+./  ../  GitLearning/
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya
+$ cd GitLearning/
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (main)
+$ ls -a
+./  ../  .git/  README.md
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (main)
+$ git branch
+* main
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (main)
+$ git switch fearure_arg
+fatal: invalid reference: fearure_arg
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (main)
+$ git switch feature_arg
+branch 'feature_arg' set up to track 'origin/feature_arg'.
+Switched to a new branch 'feature_arg'
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git branch
+* feature_arg
+  main
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ ls
+README.md  placeOrder.txt
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git add .
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git status
+On branch feature_arg
+Your branch is up to date with 'origin/feature_arg'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   placeOrder.txt
+
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git commit -m "ordering feature added"
+[feature_arg b976af8] ordering feature added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 placeOrder.txt
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git push origin feature_arg
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 161.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Dayanandar/GitLearning.git
+   2449bb2..b976af8  feature_arg -> feature_arg
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git status
+On branch feature_arg
+Your branch is up to date with 'origin/feature_arg'.
+
+nothing to commit, working tree clean
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git branch -d feature_arg
+error: cannot delete branch 'feature_arg' used by worktree at 'C:/MLA_Arghya/GitLearning'
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git push origin :feature_arg
+To https://github.com/Dayanandar/GitLearning.git
+ - [deleted]         feature_arg
+
+arghya.ghoshal1@WKSBAN36ARYTR04 MINGW64 /c/MLA_Arghya/GitLearning (feature_arg)
+$ git branch
+* feature_arg
+  main
